@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k7o-wg-kYn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15705"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Table View Controller-->
+        <scene sceneID="ONw-J2-EcT">
+            <objects>
+                <tableViewController id="k7o-wg-kYn" customClass="JDLMovieTableViewController" customModule="Movies_Objective_C" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7qn-yn-Frw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="Sp0-nH-MGi">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>Title</string>
+                                <string>Title</string>
+                            </scopeButtonTitles>
+                            <connections>
+                                <outlet property="delegate" destination="7qn-yn-Frw" id="jaU-2Q-1Xh"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="222" id="ObL-jw-Yat" customClass="JDLMovieTableViewCell" customModule="Movies_Objective_C" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="84" width="414" height="222"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ObL-jw-Yat" id="yBA-kh-SXy">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="222"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="emV-wF-F8S">
+                                            <rect key="frame" x="25" y="16" width="364" height="190"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzb-cL-Lix">
+                                                    <rect key="frame" x="0.0" y="0.0" width="344" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="4XM-Lo-rRd"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jID-Sb-qP4">
+                                                    <rect key="frame" x="0.0" y="30" width="95" height="35"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overview Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ret-QY-LJy">
+                                                    <rect key="frame" x="0.0" y="65" width="344" height="125"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="125" id="9Zf-8l-eea"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="gzb-cL-Lix" secondAttribute="trailing" constant="20" symbolic="YES" id="AYD-3r-Hsy"/>
+                                                <constraint firstAttribute="trailing" secondItem="ret-QY-LJy" secondAttribute="trailing" constant="20" symbolic="YES" id="eGS-6A-r1t"/>
+                                                <constraint firstAttribute="trailing" secondItem="ret-QY-LJy" secondAttribute="trailing" constant="20" symbolic="YES" id="vrd-bV-Hlp"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="emV-wF-F8S" firstAttribute="leading" secondItem="yBA-kh-SXy" secondAttribute="leadingMargin" constant="5" id="Wd6-sv-u9f"/>
+                                        <constraint firstItem="emV-wF-F8S" firstAttribute="top" secondItem="yBA-kh-SXy" secondAttribute="topMargin" constant="5" id="eSZ-QF-sP0"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="emV-wF-F8S" secondAttribute="bottom" constant="5" id="gfd-JN-Tmw"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="emV-wF-F8S" secondAttribute="trailing" constant="5" id="sBq-SZ-T3e"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="overviewLabel" destination="ret-QY-LJy" id="iJF-NK-VSO"/>
+                                    <outlet property="ratingLabel" destination="jID-Sb-qP4" id="tCo-ky-Yh1"/>
+                                    <outlet property="titleLabel" destination="gzb-cL-Lix" id="lb1-rz-n1A"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="k7o-wg-kYn" id="mCT-1v-z5S"/>
+                            <outlet property="delegate" destination="k7o-wg-kYn" id="ogt-KH-vFO"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="searchBar" destination="Sp0-nH-MGi" id="bBy-bT-POQ"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fna-qA-9Um" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+</document>
